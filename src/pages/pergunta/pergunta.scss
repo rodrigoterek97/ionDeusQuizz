@@ -1,0 +1,55 @@
+page-pergunta {
+    .toolbar-title {
+        color: #fff;
+    }
+    .button-inner {
+        color: #fff;
+    }
+    .toolbar-background {
+        background-color: #000;
+    }
+    .pergunta {
+        color: #fff;
+    }
+    .item {
+        background-color: transparent;
+        .item-inner {
+            border-bottom: 0 !important;
+            color: #fff;
+            .label {
+                white-space: normal;
+            }
+        }
+    }
+    .correta {
+        .radio,
+        .label,
+        .radio-icon {
+            opacity: 1 !important;
+            border-color: color($colors, secondary) !important;
+            color: color($colors, secondary) !important;
+            .radio-inner {
+                background-color: color($colors, secondary) !important;
+            }
+        }
+    }
+    .selecionada {
+        .radio,
+        .label,
+        .radio-icon.radio-checked {
+            opacity: 1 !important;
+            border-color: color($colors, danger);
+            color: color($colors, danger);
+            .radio-inner {
+                background-color: color($colors, danger);
+            }
+        }
+    }
+    .footer {
+        height: 40px;
+        .toolbar {
+            display: block !important;
+            text-align: center;
+        }
+    }
+}

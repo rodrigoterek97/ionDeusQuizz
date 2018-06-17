@@ -1,0 +1,26 @@
+<ion-header>
+
+	<ion-navbar>
+		<ion-title>Ranking {{ selectedFilterText }}</ion-title>
+
+		<ion-buttons end>
+			<button ion-button icon-only (click)="selectFilter()">
+				<ion-icon name="ios-options"></ion-icon>
+			</button>
+		</ion-buttons>
+	</ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+
+	<ion-list>
+
+		<ion-item *ngFor="let user of ranking">
+			<ion-label>{{ user.nick | titlecase }}</ion-label>
+			<ion-label text-end>{{ user[selectedFilter] }} xp</ion-label>
+		</ion-item>
+
+	</ion-list>
+
+</ion-content>

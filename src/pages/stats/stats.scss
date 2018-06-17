@@ -1,0 +1,36 @@
+page-stats {
+    .toolbar-title {
+        color: #fff;
+    }
+    .toolbar-background {
+        background-color: #000;
+    }
+    .icon{
+        color: #fff;
+    }
+    .range{
+        height: 40px;
+    }
+    .range-disabled {
+        .range-bar-active{
+            background-color: #488aff !important;
+        }
+        .range-knob{
+            background-color: #488aff !important;
+            outline: 0 !important; 
+        }
+    }
+    .item{
+        background-color: transparent;
+    }
+    .label{
+        color: #fff;
+    }
+    .label-icon{
+        width: 100%;
+        .icon{
+            position: absolute;
+            right: 16px;
+        }
+    }
+}

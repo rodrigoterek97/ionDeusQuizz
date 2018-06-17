@@ -38,7 +38,9 @@ $colors: (
   secondary:  #32db64,
   danger:     #f53d3d,
   light:      #f4f4f4,
-  dark:       #222
+  dark:       #222,
+  
+  bcground:       #222,
 );
 
 
@@ -53,7 +55,7 @@ $colors: (
 // --------------------------------------------------
 // Material Design only Sass variables can go here
 
-
+$range-md-tick-height: 8px;
 
 
 // App Windows Variables

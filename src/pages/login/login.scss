@@ -1,0 +1,35 @@
+page-login {
+    .scroll-content{
+        padding-bottom: 16px !important;
+    }
+    img {
+        margin-top: 20%;
+    }
+    .usuario {
+        background-color: #424242;
+        border-radius: 16px 16px 0 0;
+        margin-top: 5%;
+    }
+    .senha{
+        background-color: #424242;
+        border-radius: 0 0 16px 16px;
+    }
+    .item-inner{
+        border-bottom: 0 !important;
+        box-shadow: unset !important;
+        color: #c8c7cc;
+    }
+    .text-input{
+        text-align: end;
+    }
+    ion-label{
+        color: #f4f4f4 !important;
+    }
+    .bar-buttons {
+        margin-top: 16px;
+        text-align: center;
+        .button{
+            width: 40%;
+        }
+    }   
+}

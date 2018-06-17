@@ -1,0 +1,48 @@
+<ion-header>
+	<ion-navbar hideBackButton="true">
+
+		<ion-title>Pergunta nº {{ numero + 1 }}</ion-title>
+
+		<ion-buttons end>
+			<button ion-button icon-only (click)="cancelar()">
+				<ion-icon name="ios-close"></ion-icon>
+			</button>
+		</ion-buttons>
+
+	</ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+	<h3 class="pergunta">{{ pergunta.pergunta }}</h3>
+
+	<ion-list radio-group [(ngModel)]="alternativaSelecionada" [disabled]="fase.faseFeita">
+
+		<ion-item *ngFor="let alternativa of pergunta.alternativas" [ngClass]="{'correta': correta(alternativa), 'selecionada': selecionada(alternativa)}">
+			<ion-radio [value]="alternativa"></ion-radio>
+			<ion-label>{{ alternativa }}</ion-label>
+		</ion-item>
+
+	</ion-list>
+
+</ion-content>
+
+<ion-footer>
+	<ion-navbar>
+
+		<ion-buttons start>
+
+			<button ion-button icon-left (click)="anterior()" *ngIf="numero > 0">
+				<ion-icon name="ios-arrow-dropleft"></ion-icon>
+				Anterior
+			</button>
+
+			<button ion-button icon-right (click)="proxima()">
+				{{ acao }}
+				<ion-icon name="ios-arrow-dropright"></ion-icon>
+			</button>
+
+		</ion-buttons>
+
+	</ion-navbar>
+</ion-footer>

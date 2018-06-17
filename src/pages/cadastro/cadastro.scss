@@ -1,0 +1,33 @@
+page-cadastro {
+    .toolbar-title {
+        color: #fff;
+    }
+    .button-inner {
+        color: #fff;
+    }
+    .toolbar-background {
+        background-color: rgba(17, 17, 17, 0.4);
+    }
+    .item {
+        background-color: transparent;
+        .item-inner {
+            border-bottom: 0 !important;
+            box-shadow: unset !important;
+            color: #fff;
+            .label {
+                color: #fff;
+                white-space: normal;
+            }
+        }
+    }
+    .text-input{
+        text-align: end;
+    }
+    .bar-buttons {
+        margin-top: 16px;
+        text-align: center;
+        .button{
+            width: 40%;
+        }
+    }
+}

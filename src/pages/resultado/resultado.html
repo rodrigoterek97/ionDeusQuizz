@@ -1,0 +1,16 @@
+<ion-content padding>
+
+	<h2 class="titule">
+		{{ mensagem }}
+	</h2>
+
+	<h3 class="mensagem">
+		Você acabou de passar a fase {{ fase.id + 1 }} de {{ fase.area }} e sua pontuação foi de {{ pontuacao * 10 }}%
+	</h3>
+
+	<button ion-button outline color="danger" (click)="voltar()" class="btn-voltar">
+		Voltar ao menu
+	</button>
+
+
+</ion-content>

@@ -1,0 +1,41 @@
+<ion-header>
+
+	<ion-navbar>
+		<ion-title>{{ user.nick | titlecase }}</ion-title>
+
+		<ion-buttons end>
+			<button ion-button icon-only (click)="logout()">
+				<ion-icon name="ios-power"></ion-icon>
+			</button>
+		</ion-buttons>
+
+	</ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+
+	<ion-list no-lines>
+		<div *ngFor="let stat of status">
+
+			<button ion-item (click)="selectArea(stat.area)">
+				<ion-label class="label-icon">
+					{{ stat.area }}: {{ stat.porcentagem }}%
+					<ion-icon [name]="stat.area == areaShown ? 'remove' : 'add'"></ion-icon>
+				</ion-label>
+				<ion-range [(ngModel)]="stat.porcentagem" [step]="stat.step" snaps="true" disabled="true"></ion-range>
+			</button>
+
+			<div *ngIf="stat.area == areaShown">
+				<ion-item *ngFor="let statFase of stat.fases">
+					<ion-range [(ngModel)]="statFase.acertos" step="10" snaps="true" disabled="true">
+						<ion-label range-left>Fase nº {{ statFase.id + 1 }}: {{ statFase.acertos }}/100</ion-label>
+					</ion-range>
+				</ion-item>
+			</div>
+
+		</div>
+
+	</ion-list>
+
+</ion-content>

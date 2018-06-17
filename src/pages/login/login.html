@@ -1,0 +1,26 @@
+<ion-content padding>
+
+	<form [formGroup]="form" (ngSubmit)="login()">
+
+		<ion-item class="usuario">
+			<ion-label>Nickname: </ion-label>
+			<ion-input formControlName="nick"></ion-input>
+		</ion-item>
+
+		<ion-item class="senha">
+			<ion-label>Senha: </ion-label>
+			<ion-input type="password" formControlName="password"></ion-input>
+		</ion-item>
+
+		<ion-buttons>
+
+			<button ion-button outline type="submit" color="danger">Entrar</button>
+			<button ion-button outline [navPush]="cadastro" color="danger">Cadastre-se</button>
+
+		</ion-buttons>
+
+	</form>
+
+	<img src="assets/imgs/deusquizz.png">
+
+</ion-content>

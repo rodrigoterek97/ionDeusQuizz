@@ -1,3 +1,55 @@
 page-home {
-
+    .grid {
+        height: 100%;
+    }
+    .row {
+        height: 100%;
+    }
+    .col {
+        text-align: center;
+        width: 25%;
+        border: solid;
+        border-width: 1px;
+        border-color: #424242;
+        >.label {
+            height: 50px;
+            line-height: 50px;
+        }
+    }
+    .list {
+        align-items: center;
+        border: solid;
+        border-top-width: 1px;
+        border-top-color: #424242;
+        border-left: 0;
+        border-right: 0;
+        border-bottom: 0;
+        bottom: 0;
+        display: flex;
+        flex-direction: column-reverse;
+        height: 90%;
+        margin: 0;
+        overflow: scroll;
+        position: absolute;
+        width: 100%
+    }
+    button.item {
+        border-radius: 30px;
+        height: 40px;
+        margin: 8px;
+        padding: 0;
+        text-align: center !important;
+        width: 44px;
+        .item-inner {
+            padding: 0 !important;
+            .label {
+                margin: 0;
+            }
+        }
+    }
+    .titulo {
+        color: #fff;
+        margin: 0;
+        white-space: normal;
+    }
 }

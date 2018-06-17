@@ -1,0 +1,40 @@
+<ion-header>
+	<ion-navbar [hideBackButton]="true">
+		<ion-title>Cadastre-se</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<form [formGroup]="form" (ngSubmit)="cadastrar()" >
+
+		<ion-list>
+
+			<ion-item>
+				<ion-label>Nickname: </ion-label>
+				<ion-input formControlName="nick" required="true"></ion-input>
+			</ion-item>
+
+			<ion-item>
+				<ion-label>E-mail: </ion-label>
+				<ion-input type="email" formControlName="email" required="true"></ion-input>
+			</ion-item>
+
+			<ion-item>
+				<ion-label>Senha: </ion-label>
+				<ion-input type="password" formControlName="password1" required="true"></ion-input>
+			</ion-item>
+
+			<ion-item>
+				<ion-label>Repetir senha: </ion-label>
+				<ion-input type="password" formControlName="password2" required="true"></ion-input>
+			</ion-item>
+
+			<ion-buttons>
+				<button ion-button outline color="danger" type="submit">Cadastrar</button>
+				<button ion-button outline color="danger" navPop>Voltar</button>
+			</ion-buttons>
+			
+		</ion-list>
+		
+	</form>
+</ion-content>

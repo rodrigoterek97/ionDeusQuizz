@@ -1,14 +1,25 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
-</ion-header>
+<ion-content>
+	<ion-grid>
+		<ion-row>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+			<ion-col *ngFor="let area of areas">
+
+				<div style="display: table; height: 50px; width: 100%; overflow: hidden;">
+					<div style="display: table-cell; vertical-align: middle; text-align: center;">
+						<ion-label class="titulo">{{ area.nome }}</ion-label>
+					</div>
+				</div>
+
+				<ion-list>
+
+					<button ion-item *ngFor="let fase of area.fases" (click)="entrarFase(fase)" [disabled]="!fase.faseDisp" [color]="fase.faseFeita ? 'secondary' : 'danger'">
+						{{ fase.id + 1}}
+					</button>
+
+				</ion-list>
+
+			</ion-col>
+
+		</ion-row>
+	</ion-grid>
 </ion-content>

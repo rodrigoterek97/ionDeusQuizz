@@ -1,0 +1,19 @@
+page-about {
+    .toolbar-title {
+        color: #fff;
+    }
+    .toolbar-background {
+        background-color: #000;
+    }
+    .icon{
+        color: #fff;
+    }
+    .item{
+        background-color: transparent;
+        color: #fff;
+        padding: 0;
+    }
+    .item-block:last-child .item-inner{
+        border-bottom: 1px solid #dedede !important;
+    }
+}
